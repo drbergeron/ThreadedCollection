@@ -35,8 +35,10 @@ namespace ThreadedCollectionTest
 
         public async Task Process()
         {
-            var selectedStore = _storeInv.FirstOrDefault(x => x.Value >= qtyNeeded);
-            await Task.Run(()=> { pickedStore = selectedStore.Key ?? "ZZZ"; });
+            await Task.Run(() => {
+             var selectedStore = _storeInv.FirstOrDefault(x => x.Value >= qtyNeeded);
+             pickedStore = selectedStore.Key ?? "ZZZ";
+            });
         }
     }
 }
