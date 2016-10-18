@@ -41,3 +41,4 @@ bld/
 *.pidb
 *.svclog
 *.scc
+*.user
